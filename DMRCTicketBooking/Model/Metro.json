@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Rixos The Palm Dubai",
+        "location": [25.1212, 55.1535],
+        "detail": "This is test detail of station",
+    },
+    {
+        "name": "Shangri-La Hotel",
+        "location": [25.2084, 55.2719],
+        "detail": "This is test detail of station",
+    },
+    {
+        "name": "Grand Hyatt",
+        "location": [25.2285, 55.3273],
+        "detail": "This is test detail of station",
+    }
+]
+
