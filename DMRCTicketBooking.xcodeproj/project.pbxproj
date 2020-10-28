@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		84B322032548F160006DAF79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322022548F160006DAF79 /* AppDelegate.swift */; };
 		84B322052548F160006DAF79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322042548F160006DAF79 /* SceneDelegate.swift */; };
-		84B322072548F160006DAF79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322062548F160006DAF79 /* ViewController.swift */; };
 		84B3220A2548F160006DAF79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B322082548F160006DAF79 /* Main.storyboard */; };
 		84B3220C2548F166006DAF79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B3220B2548F166006DAF79 /* Assets.xcassets */; };
 		84B3220F2548F166006DAF79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3220D2548F166006DAF79 /* LaunchScreen.storyboard */; };
 		84B3221A2548F167006DAF79 /* DMRCTicketBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322192548F167006DAF79 /* DMRCTicketBookingTests.swift */; };
 		84B322252548F167006DAF79 /* DMRCTicketBookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322242548F167006DAF79 /* DMRCTicketBookingUITests.swift */; };
+		84B322412548F239006DAF79 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322402548F239006DAF79 /* AppCoordinator.swift */; };
+		84B3224E2548F28B006DAF79 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3224D2548F28B006DAF79 /* DashboardViewController.swift */; };
+		84B322562548F43B006DAF79 /* Metro.json in Resources */ = {isa = PBXBuildFile; fileRef = 84B322552548F43B006DAF79 /* Metro.json */; };
+		84B3225E2548F7DF006DAF79 /* MetroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3225D2548F7DE006DAF79 /* MetroModel.swift */; };
+		84B322632548F7FF006DAF79 /* MetroFetchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322622548F7FF006DAF79 /* MetroFetchWorker.swift */; };
+		84B322682548F848006DAF79 /* MetroLocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322672548F848006DAF79 /* MetroLocalStore.swift */; };
+		84B3226D2548F854006DAF79 /* MetroAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3226C2548F854006DAF79 /* MetroAPIStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +44,6 @@
 		84B321FF2548F160006DAF79 /* DMRCTicketBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMRCTicketBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B322022548F160006DAF79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84B322042548F160006DAF79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84B322062548F160006DAF79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84B322092548F160006DAF79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84B3220B2548F166006DAF79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84B3220E2548F166006DAF79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,13 @@
 		84B322202548F167006DAF79 /* DMRCTicketBookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DMRCTicketBookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B322242548F167006DAF79 /* DMRCTicketBookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMRCTicketBookingUITests.swift; sourceTree = "<group>"; };
 		84B322262548F167006DAF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B322402548F239006DAF79 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		84B3224D2548F28B006DAF79 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
+		84B322552548F43B006DAF79 /* Metro.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Metro.json; sourceTree = "<group>"; };
+		84B3225D2548F7DE006DAF79 /* MetroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroModel.swift; sourceTree = "<group>"; };
+		84B322622548F7FF006DAF79 /* MetroFetchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroFetchWorker.swift; sourceTree = "<group>"; };
+		84B322672548F848006DAF79 /* MetroLocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocalStore.swift; sourceTree = "<group>"; };
+		84B3226C2548F854006DAF79 /* MetroAPIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroAPIStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +111,11 @@
 		84B322012548F160006DAF79 /* DMRCTicketBooking */ = {
 			isa = PBXGroup;
 			children = (
-				84B322022548F160006DAF79 /* AppDelegate.swift */,
-				84B322042548F160006DAF79 /* SceneDelegate.swift */,
-				84B322062548F160006DAF79 /* ViewController.swift */,
+				84B3223C2548F1FC006DAF79 /* Configurations */,
+				84B3223B2548F1D6006DAF79 /* Coordinator */,
+				84B3223A2548F1C3006DAF79 /* Model */,
+				84B322392548F1B3006DAF79 /* Services */,
+				84B322382548F1A9006DAF79 /* Scenes */,
 				84B322082548F160006DAF79 /* Main.storyboard */,
 				84B3220B2548F166006DAF79 /* Assets.xcassets */,
 				84B3220D2548F166006DAF79 /* LaunchScreen.storyboard */,
@@ -126,6 +140,50 @@
 				84B322262548F167006DAF79 /* Info.plist */,
 			);
 			path = DMRCTicketBookingUITests;
+			sourceTree = "<group>";
+		};
+		84B322382548F1A9006DAF79 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				84B3224D2548F28B006DAF79 /* DashboardViewController.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		84B322392548F1B3006DAF79 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				84B322622548F7FF006DAF79 /* MetroFetchWorker.swift */,
+				84B322672548F848006DAF79 /* MetroLocalStore.swift */,
+				84B3226C2548F854006DAF79 /* MetroAPIStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		84B3223A2548F1C3006DAF79 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84B322552548F43B006DAF79 /* Metro.json */,
+				84B3225D2548F7DE006DAF79 /* MetroModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84B3223B2548F1D6006DAF79 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				84B322402548F239006DAF79 /* AppCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		84B3223C2548F1FC006DAF79 /* Configurations */ = {
+			isa = PBXGroup;
+			children = (
+				84B322042548F160006DAF79 /* SceneDelegate.swift */,
+				84B322022548F160006DAF79 /* AppDelegate.swift */,
+			);
+			path = Configurations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B3220F2548F166006DAF79 /* LaunchScreen.storyboard in Resources */,
+				84B322562548F43B006DAF79 /* Metro.json in Resources */,
 				84B3220C2548F166006DAF79 /* Assets.xcassets in Resources */,
 				84B3220A2548F160006DAF79 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +317,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84B322072548F160006DAF79 /* ViewController.swift in Sources */,
+				84B322412548F239006DAF79 /* AppCoordinator.swift in Sources */,
 				84B322032548F160006DAF79 /* AppDelegate.swift in Sources */,
+				84B322632548F7FF006DAF79 /* MetroFetchWorker.swift in Sources */,
 				84B322052548F160006DAF79 /* SceneDelegate.swift in Sources */,
+				84B3226D2548F854006DAF79 /* MetroAPIStore.swift in Sources */,
+				84B322682548F848006DAF79 /* MetroLocalStore.swift in Sources */,
+				84B3225E2548F7DF006DAF79 /* MetroModel.swift in Sources */,
+				84B3224E2548F28B006DAF79 /* DashboardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
