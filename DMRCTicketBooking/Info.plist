@@ -20,6 +20,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSMainNibFile</key>
+	<string>Main</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -67,13 +69,13 @@ Protocol extensions solve both those problems: they are like regular extensions,
 
 For example, here is an array and a set containing some names:
 
-let pythons = [&quot;Eric&quot;, &quot;Graham&quot;, &quot;John&quot;, &quot;Michael&quot;, &quot;Terry&quot;, &quot;Terry&quot;]
-let beatles = Set([&quot;John&quot;, &quot;Paul&quot;, &quot;George&quot;, &quot;Ringo&quot;])
+let pythons = ["Eric", "Graham", "John", "Michael", "Terry", "Terry"]
+let beatles = Set(["John", "Paul", "George", "Ringo"])
 Swift’s arrays and sets both conform to a protocol called Collection, so we can write an extension to that protocol to add a summarize() method to print the collection neatly
 
 extension Collection {
     func summarize() {
-        print(&quot;There are \(count) of us:&quot;)
+        print("There are \(count) of us:")
 
         for name in self {
             print(name)

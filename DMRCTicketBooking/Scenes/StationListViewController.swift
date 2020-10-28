@@ -6,9 +6,11 @@
 //
 
 import UIKit
-
+protocol StationListViewControllerDelegate: class {
+  func stationListViewControllerDidSelectStation(_ selectedStation: Metro)
+}
 class StationListViewController: UIViewController {
-    
+    weak var listDelegate: StationListViewControllerDelegate?
     //MARK: Private properties
     private let table: UITableView = UITableView()
     private var stations: [Metro] = []
@@ -126,7 +128,13 @@ extension StationListViewController: UITableViewDelegate, UITableViewDataSource 
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark
         }
-        
+        let metro:Metro
+        if isFiltering {
+            metro = filteredStations[indexPath.row]
+        } else {
+            metro = stations[indexPath.row]
+        }
+        self.listDelegate?.stationListViewControllerDidSelectStation(metro)
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {

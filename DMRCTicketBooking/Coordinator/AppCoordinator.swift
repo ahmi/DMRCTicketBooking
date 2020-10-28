@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AppCoordinator {
+class AppCoordinator: Coordinator {
     private let window: UIWindow
     
     init (window: UIWindow) {
@@ -15,7 +15,9 @@ class AppCoordinator {
     }
     
     func start() {
-        let viewcontroller = StationListViewController(title: "Select Station")//DashboardViewController()
+      //  let viewcontroller = DashboardViewController()
+            //StationListViewController(title: "Select Station")
+        let viewcontroller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DashboardViewController") as! DashboardViewController
         let navController = UINavigationController(rootViewController: viewcontroller)
         window.rootViewController = navController
         window.makeKeyAndVisible()

@@ -74,7 +74,7 @@ class DashboardViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+       // setupView()
     }
     
     
@@ -109,5 +109,10 @@ class DashboardViewController: UIViewController {
     }
     fileprivate func setupMapView(){
         
+    }
+}
+extension DashboardViewController: StationListViewControllerDelegate {
+    func stationListViewControllerDidSelectStation(_ selectedStation: Metro) {
+        print("User selected: \(selectedStation.name) station")
     }
 }
