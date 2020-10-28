@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84B322032548F160006DAF79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322022548F160006DAF79 /* AppDelegate.swift */; };
+		84B322052548F160006DAF79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322042548F160006DAF79 /* SceneDelegate.swift */; };
+		84B322072548F160006DAF79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322062548F160006DAF79 /* ViewController.swift */; };
+		84B3220A2548F160006DAF79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B322082548F160006DAF79 /* Main.storyboard */; };
+		84B3220C2548F166006DAF79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84B3220B2548F166006DAF79 /* Assets.xcassets */; };
+		84B3220F2548F166006DAF79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3220D2548F166006DAF79 /* LaunchScreen.storyboard */; };
+		84B3221A2548F167006DAF79 /* DMRCTicketBookingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322192548F167006DAF79 /* DMRCTicketBookingTests.swift */; };
+		84B322252548F167006DAF79 /* DMRCTicketBookingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322242548F167006DAF79 /* DMRCTicketBookingUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84B322162548F167006DAF79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84B321F72548F160006DAF79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B321FE2548F160006DAF79;
+			remoteInfo = DMRCTicketBooking;
+		};
+		84B322212548F167006DAF79 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84B321F72548F160006DAF79 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84B321FE2548F160006DAF79;
+			remoteInfo = DMRCTicketBooking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84B321FF2548F160006DAF79 /* DMRCTicketBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DMRCTicketBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B322022548F160006DAF79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84B322042548F160006DAF79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84B322062548F160006DAF79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84B322092548F160006DAF79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84B3220B2548F166006DAF79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84B3220E2548F166006DAF79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84B322102548F166006DAF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B322152548F167006DAF79 /* DMRCTicketBookingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DMRCTicketBookingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B322192548F167006DAF79 /* DMRCTicketBookingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMRCTicketBookingTests.swift; sourceTree = "<group>"; };
+		84B3221B2548F167006DAF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84B322202548F167006DAF79 /* DMRCTicketBookingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DMRCTicketBookingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B322242548F167006DAF79 /* DMRCTicketBookingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DMRCTicketBookingUITests.swift; sourceTree = "<group>"; };
+		84B322262548F167006DAF79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84B321FC2548F160006DAF79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B322122548F167006DAF79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B3221D2548F167006DAF79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84B321F62548F160006DAF79 = {
+			isa = PBXGroup;
+			children = (
+				84B322012548F160006DAF79 /* DMRCTicketBooking */,
+				84B322182548F167006DAF79 /* DMRCTicketBookingTests */,
+				84B322232548F167006DAF79 /* DMRCTicketBookingUITests */,
+				84B322002548F160006DAF79 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84B322002548F160006DAF79 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84B321FF2548F160006DAF79 /* DMRCTicketBooking.app */,
+				84B322152548F167006DAF79 /* DMRCTicketBookingTests.xctest */,
+				84B322202548F167006DAF79 /* DMRCTicketBookingUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84B322012548F160006DAF79 /* DMRCTicketBooking */ = {
+			isa = PBXGroup;
+			children = (
+				84B322022548F160006DAF79 /* AppDelegate.swift */,
+				84B322042548F160006DAF79 /* SceneDelegate.swift */,
+				84B322062548F160006DAF79 /* ViewController.swift */,
+				84B322082548F160006DAF79 /* Main.storyboard */,
+				84B3220B2548F166006DAF79 /* Assets.xcassets */,
+				84B3220D2548F166006DAF79 /* LaunchScreen.storyboard */,
+				84B322102548F166006DAF79 /* Info.plist */,
+			);
+			path = DMRCTicketBooking;
+			sourceTree = "<group>";
+		};
+		84B322182548F167006DAF79 /* DMRCTicketBookingTests */ = {
+			isa = PBXGroup;
+			children = (
+				84B322192548F167006DAF79 /* DMRCTicketBookingTests.swift */,
+				84B3221B2548F167006DAF79 /* Info.plist */,
+			);
+			path = DMRCTicketBookingTests;
+			sourceTree = "<group>";
+		};
+		84B322232548F167006DAF79 /* DMRCTicketBookingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84B322242548F167006DAF79 /* DMRCTicketBookingUITests.swift */,
+				84B322262548F167006DAF79 /* Info.plist */,
+			);
+			path = DMRCTicketBookingUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84B321FE2548F160006DAF79 /* DMRCTicketBooking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B322292548F167006DAF79 /* Build configuration list for PBXNativeTarget "DMRCTicketBooking" */;
+			buildPhases = (
+				84B321FB2548F160006DAF79 /* Sources */,
+				84B321FC2548F160006DAF79 /* Frameworks */,
+				84B321FD2548F160006DAF79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DMRCTicketBooking;
+			productName = DMRCTicketBooking;
+			productReference = 84B321FF2548F160006DAF79 /* DMRCTicketBooking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84B322142548F167006DAF79 /* DMRCTicketBookingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B3222C2548F167006DAF79 /* Build configuration list for PBXNativeTarget "DMRCTicketBookingTests" */;
+			buildPhases = (
+				84B322112548F167006DAF79 /* Sources */,
+				84B322122548F167006DAF79 /* Frameworks */,
+				84B322132548F167006DAF79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84B322172548F167006DAF79 /* PBXTargetDependency */,
+			);
+			name = DMRCTicketBookingTests;
+			productName = DMRCTicketBookingTests;
+			productReference = 84B322152548F167006DAF79 /* DMRCTicketBookingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84B3221F2548F167006DAF79 /* DMRCTicketBookingUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84B3222F2548F167006DAF79 /* Build configuration list for PBXNativeTarget "DMRCTicketBookingUITests" */;
+			buildPhases = (
+				84B3221C2548F167006DAF79 /* Sources */,
+				84B3221D2548F167006DAF79 /* Frameworks */,
+				84B3221E2548F167006DAF79 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84B322222548F167006DAF79 /* PBXTargetDependency */,
+			);
+			name = DMRCTicketBookingUITests;
+			productName = DMRCTicketBookingUITests;
+			productReference = 84B322202548F167006DAF79 /* DMRCTicketBookingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84B321F72548F160006DAF79 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					84B321FE2548F160006DAF79 = {
+						CreatedOnToolsVersion = 12.0.1;
+					};
+					84B322142548F167006DAF79 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 84B321FE2548F160006DAF79;
+					};
+					84B3221F2548F167006DAF79 = {
+						CreatedOnToolsVersion = 12.0.1;
+						TestTargetID = 84B321FE2548F160006DAF79;
+					};
+				};
+			};
+			buildConfigurationList = 84B321FA2548F160006DAF79 /* Build configuration list for PBXProject "DMRCTicketBooking" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84B321F62548F160006DAF79;
+			productRefGroup = 84B322002548F160006DAF79 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84B321FE2548F160006DAF79 /* DMRCTicketBooking */,
+				84B322142548F167006DAF79 /* DMRCTicketBookingTests */,
+				84B3221F2548F167006DAF79 /* DMRCTicketBookingUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84B321FD2548F160006DAF79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B3220F2548F166006DAF79 /* LaunchScreen.storyboard in Resources */,
+				84B3220C2548F166006DAF79 /* Assets.xcassets in Resources */,
+				84B3220A2548F160006DAF79 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B322132548F167006DAF79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B3221E2548F167006DAF79 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84B321FB2548F160006DAF79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B322072548F160006DAF79 /* ViewController.swift in Sources */,
+				84B322032548F160006DAF79 /* AppDelegate.swift in Sources */,
+				84B322052548F160006DAF79 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B322112548F167006DAF79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B3221A2548F167006DAF79 /* DMRCTicketBookingTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84B3221C2548F167006DAF79 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84B322252548F167006DAF79 /* DMRCTicketBookingUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84B322172548F167006DAF79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B321FE2548F160006DAF79 /* DMRCTicketBooking */;
+			targetProxy = 84B322162548F167006DAF79 /* PBXContainerItemProxy */;
+		};
+		84B322222548F167006DAF79 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84B321FE2548F160006DAF79 /* DMRCTicketBooking */;
+			targetProxy = 84B322212548F167006DAF79 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84B322082548F160006DAF79 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84B322092548F160006DAF79 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84B3220D2548F166006DAF79 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84B3220E2548F166006DAF79 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84B322272548F167006DAF79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84B322282548F167006DAF79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84B3222A2548F167006DAF79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DMRCTicketBooking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.DMRCTicketBooking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84B3222B2548F167006DAF79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DMRCTicketBooking/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.DMRCTicketBooking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		84B3222D2548F167006DAF79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DMRCTicketBookingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.DMRCTicketBookingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DMRCTicketBooking.app/DMRCTicketBooking";
+			};
+			name = Debug;
+		};
+		84B3222E2548F167006DAF79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DMRCTicketBookingTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.DMRCTicketBookingTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DMRCTicketBooking.app/DMRCTicketBooking";
+			};
+			name = Release;
+		};
+		84B322302548F167006DAF79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DMRCTicketBookingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.DMRCTicketBookingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DMRCTicketBooking;
+			};
+			name = Debug;
+		};
+		84B322312548F167006DAF79 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DMRCTicketBookingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ahmad.DMRCTicketBookingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DMRCTicketBooking;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84B321FA2548F160006DAF79 /* Build configuration list for PBXProject "DMRCTicketBooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B322272548F167006DAF79 /* Debug */,
+				84B322282548F167006DAF79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84B322292548F167006DAF79 /* Build configuration list for PBXNativeTarget "DMRCTicketBooking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B3222A2548F167006DAF79 /* Debug */,
+				84B3222B2548F167006DAF79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84B3222C2548F167006DAF79 /* Build configuration list for PBXNativeTarget "DMRCTicketBookingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B3222D2548F167006DAF79 /* Debug */,
+				84B3222E2548F167006DAF79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84B3222F2548F167006DAF79 /* Build configuration list for PBXNativeTarget "DMRCTicketBookingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84B322302548F167006DAF79 /* Debug */,
+				84B322312548F167006DAF79 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84B321F72548F160006DAF79 /* Project object */;
+}
