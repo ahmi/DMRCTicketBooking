@@ -15,12 +15,10 @@ class AppCoordinator {
     }
     
     func start() {
-        let viewcontroller = DashboardViewController()
+        let viewcontroller = StationListViewController(title: "Select Station")//DashboardViewController()
         let navController = UINavigationController(rootViewController: viewcontroller)
         window.rootViewController = navController
         window.makeKeyAndVisible()
-        let singlton = AppSingleton.shared
-        print("singlton shared instande: \(singlton)")
     }
 }
 
