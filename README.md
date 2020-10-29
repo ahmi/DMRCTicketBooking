@@ -1,4 +1,5 @@
 # DMRCTicketBooking
+- Xcode 12.1, iOS 14
 - Switch to master branch if you are on develop
 - Code covers following topics
   - Protocols for Fetch services.
