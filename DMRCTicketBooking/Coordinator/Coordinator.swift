@@ -7,5 +7,5 @@
 
 import UIKit
 protocol Coordinator {
-  func start()
+    func start()
 }

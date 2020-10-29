@@ -26,6 +26,7 @@
 		84B323022549A7A6006DAF79 /* StationsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B323012549A7A5006DAF79 /* StationsListCoordinator.swift */; };
 		84B323072549A7F5006DAF79 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B323062549A7F5006DAF79 /* Coordinator.swift */; };
 		84B323102549ACC9006DAF79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3230E2549ACC9006DAF79 /* Main.storyboard */; };
+		84B32316254A47A3006DAF79 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B32315254A47A3006DAF79 /* DashboardCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		84B323012549A7A5006DAF79 /* StationsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListCoordinator.swift; sourceTree = "<group>"; };
 		84B323062549A7F5006DAF79 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		84B3230F2549ACC9006DAF79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DMRCTicketBooking/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84B32315254A47A3006DAF79 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,9 +186,10 @@
 		84B3223B2548F1D6006DAF79 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
-				84B322402548F239006DAF79 /* AppCoordinator.swift */,
-				84B323012549A7A5006DAF79 /* StationsListCoordinator.swift */,
 				84B323062549A7F5006DAF79 /* Coordinator.swift */,
+				84B322402548F239006DAF79 /* AppCoordinator.swift */,
+				84B32315254A47A3006DAF79 /* DashboardCoordinator.swift */,
+				84B323012549A7A5006DAF79 /* StationsListCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				84B322AE254962F2006DAF79 /* UIColor+Colors.swift in Sources */,
 				84B3225E2548F7DF006DAF79 /* MetroModel.swift in Sources */,
 				84B3224E2548F28B006DAF79 /* DashboardViewController.swift in Sources */,
+				84B32316254A47A3006DAF79 /* DashboardCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
