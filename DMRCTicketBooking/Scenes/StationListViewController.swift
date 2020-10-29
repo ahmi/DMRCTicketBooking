@@ -6,12 +6,23 @@
 //
 
 import UIKit
-
+protocol StationListViewControllerDelegate: class {
+  func stationListViewControllerDidSelectStation(_ selectedStation: Metro?)
+}
 class StationListViewController: UIViewController {
-    
+    weak var delegate: StationListViewControllerDelegate?
     //MARK: Private properties
     private let table: UITableView = UITableView()
     private var stations: [Metro] = []
+    var selectedStation: Metro? {
+        didSet {
+            if (selectedStation != nil) {
+                self.navigationItem.rightBarButtonItem?.isEnabled = true
+            } else {
+                self.navigationItem.rightBarButtonItem?.isEnabled = false
+            }
+        }
+    }
 
     /// Search controller to help us with filtering items in the table view.
     var searchController: UISearchController!
@@ -46,6 +57,7 @@ class StationListViewController: UIViewController {
         fetchStations()
         setupTableView()
         setupSearchController()
+        setupNavigationbar()
     }
     // MARK: Object lifecycle
     init(title: String? ){
@@ -67,6 +79,16 @@ class StationListViewController: UIViewController {
         table.estimatedRowHeight = 100
         table.delegate = self
         table.dataSource = self
+    }
+    
+    fileprivate func setupNavigationbar() {
+        let done = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneTapped))
+        self.navigationItem.rightBarButtonItem = done
+        //to invoke didSet manually
+        self.selectedStation = { self.selectedStation }()
+    }
+    @objc func doneTapped(){
+        self.delegate?.stationListViewControllerDidSelectStation(selectedStation ?? nil)
     }
     fileprivate func fetchStations() {
         let metroLocalData = MetroLocalStore()
@@ -96,9 +118,6 @@ extension StationListViewController: UISearchBarDelegate {
         searchBar.text?.removeAll()
         searchBar.resignFirstResponder()
     }
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-
-    }
 }
 extension StationListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
@@ -118,28 +137,42 @@ extension StationListViewController: UITableViewDelegate, UITableViewDataSource 
         } else {
             metro = stations[indexPath.row]
         }
+        if (metro == selectedStation) {
+            cell.accessoryType = .checkmark
+        }
+        else {
+            cell.accessoryType = .none
+        }
         cell.textLabel?.text = metro.name
         cell.detailTextLabel?.text = metro.detail
+        cell.textLabel?.textColor = .titleColor
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .checkmark
         }
-        
+        let metro:Metro
+        if isFiltering {
+            metro = filteredStations[indexPath.row]
+        } else {
+            metro = stations[indexPath.row]
+        }
+        self.selectedStation = metro
+        tableView.reloadData()
+       // self.listDelegate?.stationListViewControllerDidSelectStation(metro)
     }
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         if let cell = tableView.cellForRow(at: indexPath) {
             cell.accessoryType = .none
         }
     }
-
-
 }
 
 extension StationListViewController: UISearchResultsUpdating {
   func updateSearchResults(for searchController: UISearchController) {
     let searchBar = searchController.searchBar
-    filterContentForSearchText(searchBar.text!)  }
+    filterContentForSearchText(searchBar.text!)
+  }
 }
 

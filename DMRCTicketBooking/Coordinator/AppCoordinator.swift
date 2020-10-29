@@ -7,17 +7,24 @@
 
 import UIKit
 
-class AppCoordinator {
-    private let window: UIWindow
+class AppCoordinator: Coordinator {
     
+    let window: UIWindow
+    let rootViewController: UINavigationController
+    let dashboardCoordinator: DashboardCoordinator
+    let listCoordinator: StationsListCoordinator
+
     init (window: UIWindow) {
         self.window = window
+        rootViewController = UINavigationController()
+        rootViewController.navigationBar.prefersLargeTitles = false
+        dashboardCoordinator = DashboardCoordinator(presenter: rootViewController)
+        listCoordinator = StationsListCoordinator(presenter: rootViewController, selectedStation: Metro(name: "", location: [1,1], detail: ""))
     }
     
     func start() {
-        let viewcontroller = StationListViewController(title: "Select Station")//DashboardViewController()
-        let navController = UINavigationController(rootViewController: viewcontroller)
-        window.rootViewController = navController
+        window.rootViewController = rootViewController
+        dashboardCoordinator.start()
         window.makeKeyAndVisible()
     }
 }

@@ -20,10 +20,13 @@
 		84B322632548F7FF006DAF79 /* MetroFetchWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322622548F7FF006DAF79 /* MetroFetchWorker.swift */; };
 		84B322682548F848006DAF79 /* MetroLocalStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322672548F848006DAF79 /* MetroLocalStore.swift */; };
 		84B3226D2548F854006DAF79 /* MetroAPIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3226C2548F854006DAF79 /* MetroAPIStore.swift */; };
-		84B3229A25495079006DAF79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3229925495079006DAF79 /* Main.storyboard */; };
 		84B322A6254962D8006DAF79 /* UIColor+TraitCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322A5254962D8006DAF79 /* UIColor+TraitCollection.swift */; };
 		84B322AE254962F2006DAF79 /* UIColor+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322AD254962F2006DAF79 /* UIColor+Colors.swift */; };
 		84B322BB2549703C006DAF79 /* StationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B322BA2549703C006DAF79 /* StationListViewController.swift */; };
+		84B323022549A7A6006DAF79 /* StationsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B323012549A7A5006DAF79 /* StationsListCoordinator.swift */; };
+		84B323072549A7F5006DAF79 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B323062549A7F5006DAF79 /* Coordinator.swift */; };
+		84B323102549ACC9006DAF79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84B3230E2549ACC9006DAF79 /* Main.storyboard */; };
+		84B32316254A47A3006DAF79 /* DashboardCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B32315254A47A3006DAF79 /* DashboardCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,10 +66,13 @@
 		84B322622548F7FF006DAF79 /* MetroFetchWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroFetchWorker.swift; sourceTree = "<group>"; };
 		84B322672548F848006DAF79 /* MetroLocalStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroLocalStore.swift; sourceTree = "<group>"; };
 		84B3226C2548F854006DAF79 /* MetroAPIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetroAPIStore.swift; sourceTree = "<group>"; };
-		84B3229925495079006DAF79 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		84B322A5254962D8006DAF79 /* UIColor+TraitCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+TraitCollection.swift"; sourceTree = "<group>"; };
 		84B322AD254962F2006DAF79 /* UIColor+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Colors.swift"; sourceTree = "<group>"; };
 		84B322BA2549703C006DAF79 /* StationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationListViewController.swift; sourceTree = "<group>"; };
+		84B323012549A7A5006DAF79 /* StationsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsListCoordinator.swift; sourceTree = "<group>"; };
+		84B323062549A7F5006DAF79 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		84B3230F2549ACC9006DAF79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = DMRCTicketBooking/Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84B32315254A47A3006DAF79 /* DashboardCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +103,7 @@
 		84B321F62548F160006DAF79 = {
 			isa = PBXGroup;
 			children = (
-				84B3229925495079006DAF79 /* Main.storyboard */,
+				84B3230E2549ACC9006DAF79 /* Main.storyboard */,
 				84B322012548F160006DAF79 /* DMRCTicketBooking */,
 				84B322182548F167006DAF79 /* DMRCTicketBookingTests */,
 				84B322232548F167006DAF79 /* DMRCTicketBookingUITests */,
@@ -180,7 +186,10 @@
 		84B3223B2548F1D6006DAF79 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				84B323062549A7F5006DAF79 /* Coordinator.swift */,
 				84B322402548F239006DAF79 /* AppCoordinator.swift */,
+				84B32315254A47A3006DAF79 /* DashboardCoordinator.swift */,
+				84B323012549A7A5006DAF79 /* StationsListCoordinator.swift */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -309,7 +318,7 @@
 				84B3220F2548F166006DAF79 /* LaunchScreen.storyboard in Resources */,
 				84B322562548F43B006DAF79 /* Metro.json in Resources */,
 				84B3220C2548F166006DAF79 /* Assets.xcassets in Resources */,
-				84B3229A25495079006DAF79 /* Main.storyboard in Resources */,
+				84B323102549ACC9006DAF79 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +344,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				84B322412548F239006DAF79 /* AppCoordinator.swift in Sources */,
+				84B323022549A7A6006DAF79 /* StationsListCoordinator.swift in Sources */,
+				84B323072549A7F5006DAF79 /* Coordinator.swift in Sources */,
 				84B322BB2549703C006DAF79 /* StationListViewController.swift in Sources */,
 				84B322032548F160006DAF79 /* AppDelegate.swift in Sources */,
 				84B322632548F7FF006DAF79 /* MetroFetchWorker.swift in Sources */,
@@ -345,6 +356,7 @@
 				84B322AE254962F2006DAF79 /* UIColor+Colors.swift in Sources */,
 				84B3225E2548F7DF006DAF79 /* MetroModel.swift in Sources */,
 				84B3224E2548F28B006DAF79 /* DashboardViewController.swift in Sources */,
+				84B32316254A47A3006DAF79 /* DashboardCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +398,14 @@
 				84B3220E2548F166006DAF79 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		84B3230E2549ACC9006DAF79 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84B3230F2549ACC9006DAF79 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
