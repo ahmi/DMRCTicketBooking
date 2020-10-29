@@ -10,7 +10,7 @@ protocol StationListViewControllerDelegate: class {
   func stationListViewControllerDidSelectStation(_ selectedStation: Metro?)
 }
 class StationListViewController: UIViewController {
-    weak var listDelegate: StationListViewControllerDelegate?
+    weak var delegate: StationListViewControllerDelegate?
     //MARK: Private properties
     private let table: UITableView = UITableView()
     private var stations: [Metro] = []
@@ -88,7 +88,7 @@ class StationListViewController: UIViewController {
         self.selectedStation = { self.selectedStation }()
     }
     @objc func doneTapped(){
-        self.listDelegate?.stationListViewControllerDidSelectStation(selectedStation ?? nil)
+        self.delegate?.stationListViewControllerDidSelectStation(selectedStation ?? nil)
     }
     fileprivate func fetchStations() {
         let metroLocalData = MetroLocalStore()
@@ -117,9 +117,6 @@ extension StationListViewController: UISearchBarDelegate {
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.text?.removeAll()
         searchBar.resignFirstResponder()
-    }
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-
     }
 }
 extension StationListViewController: UITableViewDelegate, UITableViewDataSource {

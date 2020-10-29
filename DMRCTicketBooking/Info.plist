@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>App requires access to your location to work!</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -69,13 +71,13 @@ Protocol extensions solve both those problems: they are like regular extensions,
 
 For example, here is an array and a set containing some names:
 
-let pythons = ["Eric", "Graham", "John", "Michael", "Terry", "Terry"]
-let beatles = Set(["John", "Paul", "George", "Ringo"])
+let pythons = [&quot;Eric&quot;, &quot;Graham&quot;, &quot;John&quot;, &quot;Michael&quot;, &quot;Terry&quot;, &quot;Terry&quot;]
+let beatles = Set([&quot;John&quot;, &quot;Paul&quot;, &quot;George&quot;, &quot;Ringo&quot;])
 Swift’s arrays and sets both conform to a protocol called Collection, so we can write an extension to that protocol to add a summarize() method to print the collection neatly
 
 extension Collection {
     func summarize() {
-        print("There are \(count) of us:")
+        print(&quot;There are \(count) of us:&quot;)
 
         for name in self {
             print(name)

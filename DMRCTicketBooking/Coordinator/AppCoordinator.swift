@@ -25,7 +25,6 @@ class AppCoordinator: Coordinator {
     func start() {
         window.rootViewController = rootViewController
         dashboardCoordinator.start()
-      //  listCoordinator.start()
         window.makeKeyAndVisible()
     }
 }
