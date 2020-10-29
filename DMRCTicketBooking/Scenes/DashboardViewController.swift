@@ -31,10 +31,10 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     fileprivate func setupView() {
-        btnSelectInitial.setTitleColor(.init(light: .titleColorforLight, dark: .titleColorforDark), for: .normal)
-        btnSelectDestination.setTitleColor(.init(light: .titleColorforLight, dark: .titleColorforDark), for: .normal)
-        lblPriceInfo.textColor = .init(light: .titleColorforLight, dark: .titleColorforDark)
-        map.tintColor = .init(light: .titleColorforLight, dark: .titleColorforDark)
+        btnSelectInitial.setTitleColor(.titleColor, for: .normal)
+        btnSelectDestination.setTitleColor(.titleColor, for: .normal)
+        lblPriceInfo.textColor = .titleColor
+        map.tintColor = .titleColor
     }
     
     @IBAction func btnSelection_tapped(_ sender: UIButton) {

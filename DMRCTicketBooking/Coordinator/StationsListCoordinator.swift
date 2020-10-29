@@ -6,7 +6,14 @@
 //
 
 import UIKit
-class StationsListCoordinator: Coordinator {
+class StationsListCoordinator: Coordinator, StationListViewControllerDelegate {
+    func stationListViewControllerDidSelectStation(_ selectedStation: Metro?) {
+        self.selectedStation = selectedStation
+        dashboardViewController = presenter.viewControllers[0] as? DashboardViewController
+        dashboardViewController?.selectedStation = self.selectedStation
+        presenter.popViewController(animated: true)
+    }
+    
     
     private let presenter: UINavigationController
     private var selectedStation: Metro?
@@ -21,7 +28,7 @@ class StationsListCoordinator: Coordinator {
     
     func start() {
         let listVC = StationListViewController(title: "Choose Station")
-     //   listVC.listDelegate = self
+        listVC.delegate = self
         listVC.selectedStation = self.selectedStation
         presenter.pushViewController(listVC, animated: true)
         self.stationListViewController = listVC

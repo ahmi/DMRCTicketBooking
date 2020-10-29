@@ -36,11 +36,14 @@
                                 <state key="normal" title="Select Destination">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSelection_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Un6-41-IlL"/>
+                                </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cT9-g3-UjO">
                                 <rect key="frame" x="0.0" y="164" width="414" height="657"/>
                             </mapView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eeJ-zb-1ko">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eeJ-zb-1ko">
                                 <rect key="frame" x="20" y="841" width="374" height="41"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="this is a long text and i want to see it wrapped" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egk-pp-ZIj">
@@ -50,7 +53,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRZ-9C-9ot">
-                                        <rect key="frame" x="349" y="0.0" width="25" height="41"/>
+                                        <rect key="frame" x="349" y="0.0" width="25" height="24"/>
                                     </button>
                                 </subviews>
                             </stackView>

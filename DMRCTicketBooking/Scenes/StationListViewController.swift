@@ -145,6 +145,7 @@ extension StationListViewController: UITableViewDelegate, UITableViewDataSource 
         }
         cell.textLabel?.text = metro.name
         cell.detailTextLabel?.text = metro.detail
+        cell.textLabel?.textColor = .titleColor
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
