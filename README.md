@@ -4,6 +4,7 @@
 - Code covers following topics
   - Protocols for Fetch services.
   - Generics, Result Type, 3 ways of Error handling in Data layer
+  - MkMapView, Annotations and Routes
   - Coordinator pattern for navigation
   - Light and Dark mode live transition
   - Multiple screen sizes and orientations
