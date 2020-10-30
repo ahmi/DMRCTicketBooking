@@ -11,7 +11,6 @@ import UIKit
 public extension UIColor {
     //MARK:- Custom colors
     static let titleColor = UIColor.init(light: .darkText, dark: .lightText)
-    static let buttonBackground = UIColor.init(light: .lightGray, dark: .darkGray)
-    static let subtitleColorforDark = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
-    static let subtitleColorforLight = #colorLiteral(red: 0.2196078449, green: 0.007843137719, blue: 0.8549019694, alpha: 1)
+    static let mapRouteColor = UIColor(red: 17.0/255.0, green: 147.0/255.0, blue: 255.0/255.0, alpha: 1)
+    static let buttonBackground = UIColor.init(light: #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1), dark: #colorLiteral(red: 0.4745098054, green: 0.8392156959, blue: 0.9764705896, alpha: 1))
 }

@@ -25,6 +25,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
     fileprivate var initialStation: Metro?
     fileprivate var destinationStation: Metro?
     fileprivate var allStations: [Metro] = []
+    fileprivate var tripDetails: String?
     
     weak var delegate: DashboardViewControllerDelegate?
 
@@ -32,11 +33,9 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
         didSet{
             if (selectedStation != nil) {
                 selectedButton?.setTitle(selectedStation!.name, for: .normal)
-                
                 if (selectedStation != initialStation && selectedStation != destinationStation ) {
                     addAnnotation(selectedStation: selectedStation!)
                 }
-                
                 if selectedButton == btnSelectInitial {
                     initialStation = selectedStation
                 } else {
@@ -56,28 +55,59 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
     //MARK:- Use Cases
     
     func updateFare() {
-        if ((initialStation != nil) && destinationStation != nil)  {
-            
+        if ((initialStation != nil) && destinationStation != nil)  { /*
+            if let initialIdx = allStations.firstIndex(where: {$0 == initialStation}) {
+                print(initialIdx)
+                if let finalIdx = allStations.firstIndex(where: {$0 == destinationStation}){
+                    print(finalIdx)
+                    for (i = initialIdx to finalIdx) {
+                        print (allStations[i])
+                    }
+                }
+            } else {
+                //item could not be found
+            } */
             let fare = initialStation!.fare + destinationStation!.fare
-            let finalMessage = initialStation!.name + " to " + destinationStation!.name + " fare is \(fare) INR"
-            lblPriceInfo.text = finalMessage
+            tripDetails = initialStation!.name + " to " + destinationStation!.name + " fare is \(fare) INR"
+            lblPriceInfo.text = tripDetails
             
             let initialLocation = CLLocationCoordinate2D(latitude: initialStation!.location[0], longitude: initialStation!.location[1])
             let destination = CLLocationCoordinate2D(latitude: destinationStation!.location[0], longitude: destinationStation!.location[1])
             showRouteOnMap(pickupCoordinate: initialLocation, destinationCoordinate: destination)
         }
     }
+    
+    @objc func resetEverythingRestratApp(){
+        self.selectedButton = nil
+        self.selectedStation = nil
+        self.initialStation = nil
+        self.destinationStation = nil
+        self.tripDetails = nil
+        lblPriceInfo.text = "Trip Details go here"
+        self.map.removeOverlays(map.overlays)
+        self.map.removeAnnotations(map.annotations)
+        self.btnSelectInitial.setTitle("Select Initial", for: .normal)
+        self.btnSelectDestination.setTitle("Select Destination", for: .normal)
+    }
+    
     func addAnnotation(selectedStation: Metro) {
         let station = MKPointAnnotation()
         station.title = selectedStation.name
         station.coordinate = CLLocationCoordinate2D(latitude: selectedStation.location[0], longitude: selectedStation.location[1] )
         map.addAnnotation(station)
     }
+    
     fileprivate func setupView() {
         btnSelectInitial.setTitleColor(.titleColor, for: .normal)
         btnSelectDestination.setTitleColor(.titleColor, for: .normal)
         lblPriceInfo.textColor = .titleColor
         map.tintColor = .titleColor
+        btnSelectInitial.layer.cornerRadius = 10
+        btnSelectDestination.layer.cornerRadius = 10
+        //Bar button item
+        let done = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(resetEverythingRestratApp))
+        self.navigationItem.rightBarButtonItem = done
+
         //load static array of metro stations
         let localMetroStore = MetroLocalStore()
         allStations =  localMetroStore.returnAllMetroStations()
@@ -88,10 +118,8 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
         switch sender.tag {
             case 0:
                 selectedButton = btnSelectInitial
-
             case 1:
                 selectedButton = btnSelectDestination
-                
             default:
                 break
         }
@@ -153,60 +181,42 @@ extension DashboardViewController: MKMapViewDelegate  {
 
         let sourcePlacemark = MKPlacemark(coordinate: pickupCoordinate, addressDictionary: nil)
         let destinationPlacemark = MKPlacemark(coordinate: destinationCoordinate, addressDictionary: nil)
-
         let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
         let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
-
         let sourceAnnotation = MKPointAnnotation()
-
         if let location = sourcePlacemark.location {
             sourceAnnotation.coordinate = location.coordinate
         }
-
         let destinationAnnotation = MKPointAnnotation()
-
         if let location = destinationPlacemark.location {
             destinationAnnotation.coordinate = location.coordinate
         }
-
         self.map.showAnnotations([sourceAnnotation,destinationAnnotation], animated: true )
-
         let directionRequest = MKDirections.Request()
         directionRequest.source = sourceMapItem
         directionRequest.destination = destinationMapItem
         directionRequest.transportType = .automobile
-
         // Calculate the direction
         let directions = MKDirections(request: directionRequest)
-
         directions.calculate {
             (response, error) -> Void in
-
             guard let response = response else {
                 if let error = error {
                     print("Error: \(error)")
                 }
-
                 return
             }
-
             let route = response.routes[0]
             self.map.addOverlay((route.polyline), level: MKOverlayLevel.aboveRoads)
             let rect = route.polyline.boundingMapRect
             self.map.setRegion(MKCoordinateRegion(rect), animated: true)
         }
     }
-
     // MARK: - MKMapViewDelegate
-
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-
         let renderer = MKPolylineRenderer(overlay: overlay)
-
-        renderer.strokeColor = UIColor(red: 17.0/255.0, green: 147.0/255.0, blue: 255.0/255.0, alpha: 1)
-
+        renderer.strokeColor = .mapRouteColor
         renderer.lineWidth = 5.0
-
         return renderer
     }
 }
