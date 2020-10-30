@@ -54,6 +54,7 @@ class StationListViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectedStation = nil
         fetchStations()
         setupTableView()
         setupSearchController()

@@ -12,14 +12,12 @@ class AppCoordinator: Coordinator {
     let window: UIWindow
     let rootViewController: UINavigationController
     let dashboardCoordinator: DashboardCoordinator
-    let listCoordinator: StationsListCoordinator
 
     init (window: UIWindow) {
         self.window = window
         rootViewController = UINavigationController()
         rootViewController.navigationBar.prefersLargeTitles = false
         dashboardCoordinator = DashboardCoordinator(presenter: rootViewController)
-        listCoordinator = StationsListCoordinator(presenter: rootViewController, selectedStation: Metro(name: "", location: [1,1], detail: ""))
     }
     
     func start() {
