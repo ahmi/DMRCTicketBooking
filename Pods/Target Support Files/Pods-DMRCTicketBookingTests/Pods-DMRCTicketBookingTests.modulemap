@@ -1,0 +1,6 @@
+framework module Pods_DMRCTicketBookingTests {
+  umbrella header "Pods-DMRCTicketBookingTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

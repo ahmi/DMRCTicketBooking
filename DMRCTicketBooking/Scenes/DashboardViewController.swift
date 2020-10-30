@@ -125,6 +125,10 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     @IBAction func btnShare_tapped(_ sender: Any) {
+        if ((initialStation == nil) || destinationStation == nil)  {
+            self.view.makeToast("Please select departure and destination station to share this information")
+            return
+        }
         let image = UIImage(named: "metro")!
         let text = lblPriceInfo.text!
         let activityVC = UIActivityViewController(activityItems: [image, text], applicationActivities: nil)

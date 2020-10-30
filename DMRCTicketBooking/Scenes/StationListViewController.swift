@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast_Swift
 protocol StationListViewControllerDelegate: class {
   func stationListViewControllerDidSelectStation(_ selectedStation: Metro?)
 }
@@ -51,6 +52,7 @@ class StationListViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Stations"
         definesPresentationContext = true
+        self.view.makeToast("Drag the list down to search stations")
     }
     override func viewDidLoad() {
         super.viewDidLoad()
