@@ -18,13 +18,15 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var btnShare: UIButton!
     @IBOutlet weak var map: MKMapView!
     @IBOutlet weak var lblPriceInfo: UILabel!
-    weak var delegate: DashboardViewControllerDelegate?
+
     fileprivate var selectedButton: UIButton?
     fileprivate var locationManager = CLLocationManager()
     fileprivate var current_location:CLLocation = CLLocation()
     fileprivate var initialStation: Metro?
     fileprivate var destinationStation: Metro?
     fileprivate var allStations: [Metro] = []
+    
+    weak var delegate: DashboardViewControllerDelegate?
 
     var selectedStation: Metro? {
         didSet{
@@ -50,6 +52,8 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
         setupView()
         setUpLocationManager()
     }
+    
+    //MARK:- Use Cases
     
     func updateFare() {
         if ((initialStation != nil) && destinationStation != nil)  {
@@ -78,7 +82,7 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
         let localMetroStore = MetroLocalStore()
         allStations =  localMetroStore.returnAllMetroStations()
     }
-    
+    //MARK:- Button Actions
     @IBAction func btnSelection_tapped(_ sender: UIButton) {
         self.delegate?.dashboardViewControllerSelectStationTapped(selectedStation)
         switch sender.tag {
@@ -91,6 +95,13 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
             default:
                 break
         }
+    }
+    @IBAction func btnShare_tapped(_ sender: Any) {
+        let image = UIImage(named: "metro")!
+        let text = lblPriceInfo.text!
+        let activityVC = UIActivityViewController(activityItems: [image, text], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        self.present(activityVC, animated: true, completion: nil)
     }
 }
 extension DashboardViewController: MKMapViewDelegate  {
