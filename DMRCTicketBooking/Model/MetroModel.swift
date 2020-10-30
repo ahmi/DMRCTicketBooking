@@ -17,4 +17,5 @@ struct Metro: Codable,Equatable {
     let name: String
     let location: [Double]
     let detail: String
+    let fare: Int
 }
