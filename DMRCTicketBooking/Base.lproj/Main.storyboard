@@ -54,6 +54,9 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRZ-9C-9ot">
                                         <rect key="frame" x="200" y="0.0" width="184" height="41"/>
+                                        <connections>
+                                            <action selector="btnShare_tapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rUq-Fj-Khl"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
