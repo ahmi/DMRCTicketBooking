@@ -3,6 +3,7 @@
 - Switch to master branch if you are on develop
 - Navigate to root directory and run `pod install` , Then open  `DMRCTicketBooking.workspace` 
 - Code covers following topics
+  - MVVM (Partial)
   - Protocols for Fetch services.
   - Generics, Result Type, 3 ways of Error handling in Data layer
   - Swift higher order functions
