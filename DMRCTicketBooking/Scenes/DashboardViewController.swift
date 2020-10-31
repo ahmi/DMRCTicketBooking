@@ -55,25 +55,28 @@ class DashboardViewController: UIViewController, CLLocationManagerDelegate {
     //MARK:- Use Cases
     
     func updateFare() {
-        if ((initialStation != nil) && destinationStation != nil)  { /*
-            if let initialIdx = allStations.firstIndex(where: {$0 == initialStation}) {
-                print(initialIdx)
-                if let finalIdx = allStations.firstIndex(where: {$0 == destinationStation}){
-                    print(finalIdx)
-                    for (i = initialIdx to finalIdx) {
-                        print (allStations[i])
+        if ((initialStation != nil) && destinationStation != nil)  {
+            var totalFare = 0
+            if var initialIdx = allStations.firstIndex(where: {$0 == initialStation}) {
+                if var finalIdx = allStations.firstIndex(where: {$0 == destinationStation}){
+                    if initialIdx > finalIdx {
+                        // swap values to run high order function reduce
+                        (initialIdx, finalIdx) = (finalIdx, initialIdx)
+                    }
+                    totalFare = allStations[initialIdx..<finalIdx].reduce(0) { $0 + $1.fare
                     }
                 }
             } else {
                 //item could not be found
-            } */
-            let fare = initialStation!.fare + destinationStation!.fare
-            tripDetails = initialStation!.name + " to " + destinationStation!.name + " fare is \(fare) INR"
+            }
+            tripDetails = initialStation!.name + " to " + destinationStation!.name + " fare is \(totalFare) INR"
             lblPriceInfo.text = tripDetails
             
             let initialLocation = CLLocationCoordinate2D(latitude: initialStation!.location[0], longitude: initialStation!.location[1])
             let destination = CLLocationCoordinate2D(latitude: destinationStation!.location[0], longitude: destinationStation!.location[1])
             showRouteOnMap(pickupCoordinate: initialLocation, destinationCoordinate: destination)
+            
+            self.view.makeToast(tripDetails)
         }
     }
     
